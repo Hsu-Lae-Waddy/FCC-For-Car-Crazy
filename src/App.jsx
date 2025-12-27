@@ -1,14 +1,21 @@
-import Header from "./sections/header"
-import Slider from "./sections/Slider"
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./Pages/Home";
+import Lamborghini from "./Pages/Lamborghini";
+import Audi from "./Pages/Audi";
+import BMW from "./Pages/BMW";
+import Mercedes from "./Pages/Mercedesbenz"
 
 export default function App() {
   return (
-    <> 
-    <Header/>
-    <div className="bg-gray-400"> 
-    <h2 className="text-4xl font-bold font-mono mb-4 p-6 text-center">You can't hide who you are</h2>
-    <Slider/></div>
-    </>
-    
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/lamborghini" element={<Lamborghini />} />
+      <Route path="/audi" element={<Audi />} />
+      <Route path="/bmw" element={<BMW />} />
+      <Route path="/mercedes" element={<Mercedes />} />
+
+
+    </Routes>
+  );
 }

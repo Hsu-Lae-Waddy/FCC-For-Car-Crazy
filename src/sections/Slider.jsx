@@ -1,38 +1,26 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
+
+import "swiper/css";
 import "swiper/css/navigation";
 
 import lambo from "../assets/images/lamborghini.jpeg";
 import audi from "../assets/images/Audi.png";
 import BMW from "../assets/images/BMW.jpg";
+import mercedesbenz from "../assets/images/mercedes benz.jpeg";
 
 function Slider() {
   return (
+    
     <Swiper
       modules={[Navigation]}
       navigation
-      spaceBetween={50}
       slidesPerView={1}
-      className="w-full min-h-screen mx-auto"  // Added mx-auto for horizontal centering of the slider itself
+      className="w-full min-h-screen"
     >
-      {/* Slide 1 */}
-      <SwiperSlide className="flex items-center justify-center min-h-full">  
-        <div className="flex flex-col items-center justify-center">
-          <img
-            src={lambo}
-            alt="Lamborghini"
-            className="w-125 md:w-175 h-75 object-cover rounded-lg"
-          />
-          <h2 className="text-black font-bold text-3xl mt-4 text-center font-serif">
-            Lamborghini
-          </h2>
-        </div>
-      </SwiperSlide>
-
-      {/* Slide 2 */}
-      <SwiperSlide className="flex items-center justify-center min-h-full">
-        <div className="flex flex-col items-center justify-center">
+      <SwiperSlide className="flex items-center justify-center min-h-screen">
+        <Link to="/Audi" className="flex flex-col items-center">
           <img
             src={audi}
             alt="Audi"
@@ -41,21 +29,46 @@ function Slider() {
           <h2 className="text-black font-bold text-3xl mt-4 text-center font-serif">
             Audi
           </h2>
-        </div>
+        </Link>
       </SwiperSlide>
 
-      {/* Slide 3 */}
-      <SwiperSlide className="flex items-center justify-center min-h-full">
-        <div className="flex flex-col items-center justify-center">
+      <SwiperSlide className="flex items-center justify-center min-h-screen">
+        <Link to="/lamborghini" className="flex flex-col items-center">
+          <img
+            src={lambo}
+            alt="Lamborghini"
+            className="w-125 md:w-175 h-75 object-cover rounded-lg"
+          />
+          <h2 className="text-black font-bold text-3xl mt-4 text-center font-serif">
+            Lamborghini
+          </h2>
+        </Link>
+      </SwiperSlide>
+
+       <SwiperSlide className="flex items-center justify-center min-h-screen">
+        <Link to="/bmw" className="flex flex-col items-center">
           <img
             src={BMW}
             alt="BMW"
-            className="w-125 md:w-175 h-75  object-cover rounded-lg"
+            className="w-125 md:w-175 h-75 object-cover rounded-lg"
           />
           <h2 className="text-black font-bold text-3xl mt-4 text-center font-serif">
             BMW
           </h2>
-        </div>
+        </Link>
+      </SwiperSlide>
+
+       <SwiperSlide className="flex items-center justify-center min-h-screen">
+        <Link to="/mercedes" className="flex flex-col items-center">
+          <img
+            src={mercedesbenz}
+            alt="Mercedesbenz"
+            className="w-125 md:w-175 h-75 object-cover rounded-lg"
+          />
+          <h2 className="text-black font-bold text-3xl mt-4 text-center font-serif">
+            Mercedes Benz
+          </h2>
+        </Link>
       </SwiperSlide>
     </Swiper>
   );
