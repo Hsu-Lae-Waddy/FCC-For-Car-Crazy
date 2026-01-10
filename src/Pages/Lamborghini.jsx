@@ -56,7 +56,7 @@ export default function LamborghiniPage() {
 
         <div
           style={{
-            width: '45%',
+            width: '175px',
             display: 'inline-block',
             textAlign: 'center',
             backgroundColor: '#0F0F0F',

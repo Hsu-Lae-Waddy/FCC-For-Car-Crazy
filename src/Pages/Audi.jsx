@@ -1,7 +1,7 @@
 import React from 'react';
 import ProfileCard from '../ProfileCard';
 import urusImg from '../assets/images/Urus.png'; 
-import Lamborfhini from '../assets/images/lamborghini1.jpeg'
+import Lamborfhini from '../assets/images/Audi1.jpg';
 
 export default function LamborghiniPage() {
   return (
@@ -46,17 +46,17 @@ export default function LamborghiniPage() {
             width: '50%',
             display: 'inline-block',
             verticalAlign: 'top',
-            padding: '20px',
+            padding: '10px',
             boxSizing: 'border-box',
           }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolore
-          modi aperiam rerum ipsum numquam sed quidem dicta expedita...
+          The Audi name comes from founder August Horch; he founded Audi in 1909 after leaving his first company, translating "Horch" (listen) into Latin as "Audi". In 1932, Audi merged with Horch, DKW, and Wanderer to form Auto Union, creating the iconic four interlocking rings logo symbolizing their union.
         </div>
 
         <div
           style={{
-            width: '45%',
+            paddingTop:'10px',
+            width: '61px',
             display: 'inline-block',
             textAlign: 'center',
             backgroundColor: '#0F0F0F',
@@ -66,7 +66,7 @@ export default function LamborghiniPage() {
           <img
             src={Lamborfhini}
             alt="Lamborghini logo"
-            style={{ maxWidth: '100%', height: 'auto' }}
+            style={{ Width: '175px', height: '100px' }}
           />
         </div>
       </div>
